@@ -4,12 +4,11 @@ echo "Le script doit etre en root/sudo"
 apt-get update -y
 apt-get upgrade -y
 apt-get install zsh git curl htop -y
-echo"Install antigen .zshrc config file"
+mkdir -p ~/.antigen
+curl -L git.io/antigen > ~/.antigen/antigen.zsh
+chsh -s /bin/zsh
 cd /tmp
-git clone https://github.com/rogafe/server_dotefile.git
-mv antigen ~/.antigen
-source ~/.antigen/antigen.zsh
-mv -r zshrc ~/.zshrc
-echo "Install of antigen and .zshrc conf done"
-echo "Docker install"
-curl -sSL https://get.docker.com/ | sh
+wget https://raw.githubusercontent.com/rogafe/server_dotefile/master/zshrc
+mv zshrc ~/.zshrc
+cd 
+echo "Install dotfile done, need restart the shell"
