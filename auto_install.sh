@@ -18,7 +18,7 @@ cd /tmp
 wget https://raw.githubusercontent.com/rogafe/server_dotefile/master/zshrc
 mv zshrc ~/.zshrc
 echo "install of antigen done"
-cd tmp
+cd /tmp
 echo "installing docker "
 curl -fsSL test.docker.com -o test-docker.sh && sh test-docker.sh
 echo "docker installed "
