@@ -5,11 +5,11 @@ if [[ $EUID -ne 0 ]]; then
   echo "You must be a root user" 2>&1
   exit 1
 else
-echo "updating"
+echo "updating"; sleep 1
 apt-get update
-echo "upgrading"
+echo "upgrading"; sleep 1
 apt-get upgrade -y
-echo 'Install of needed package "zsh git curl htop byobu vim"'
+echo 'Install of needed package "zsh git curl htop byobu vim"';sleep 01
 apt-get install zsh git curl htop byobu vim -y
 echo "setting up antigen and zsh "
 mkdir -p ~/.antigen
