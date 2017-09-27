@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Auto install of all my need tool for a server"
+# echo "ad augusta per angusta"
 if [[ $EUID -ne 0 ]]; then
   echo "You must be a root user" 2>&1
   exit 1
