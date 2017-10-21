@@ -21,7 +21,7 @@ mv zshrc ~/.zshrc
 echo "install of antigen done"
 cd /tmp
 echo "[installing docker]"
-curl -fsSL test.docker.com -o test-docker.sh && sh test-docker.sh
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
 echo "[docker installed]"
 sleep 2
 echo "[installing spf13-vim]"
