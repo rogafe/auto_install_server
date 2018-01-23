@@ -33,7 +33,7 @@ case ${answer:0:1} in
         echo No
         ;;
 esac
-       sleep 2
+sleep 2
 
 echo "[?] spf13-vim "
 read -p "Install spf13-vim ? (y/n)"
