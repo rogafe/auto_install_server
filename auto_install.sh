@@ -21,34 +21,13 @@ mv zshrc ~/.zshrc
 echo "install of antigen done"
 cd /tmp
 
-echo "[?] Docker ?"
-
-read -p "Install docker ? (y/n)" answer
-case ${answer:0:1} in
-    y|Y )
-        echo "[installing docker]"
-        curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
-        echo "[docker installed ]" 
-    * )
-        echo No
-        ;;
-esac
-sleep 2
-
-echo "[?] spf13-vim "
-read -p "Install spf13-vim ? (y/n)"
-case ${answer:0:1} in
-    y|Y )
-          echo "[installing spf13-vim]"
-          curl http://j.mp/spf13-vim3 -L -o - | sh
-          echo "[all done closing the ssh shell]"
-          echo "Some time shell not work after this so I  close the remote shell"
-          sleep 2
-          exit
-    * )
-           echo No
-esac
-
-           exit
-
+echo -n "[?] Docker ? (y/n)"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+    echo [...] Installing Docker
+     curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+else
+    echo [...] skip
 fi
+
+
