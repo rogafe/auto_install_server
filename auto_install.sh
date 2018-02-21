@@ -22,12 +22,11 @@ echo "install of antigen done"
 cd /tmp
 
 echo -n "[?] Docker ? (y/n)"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-    echo [...] Installing Docker
-     curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
-else
-    echo [...] skip
-fi
-
-
+case &{answare:0:1} in
+    y|Y )
+        echo "[...] Installing Docker"
+    ;;
+    * )
+    echo [...] Skiping 
+        ;;
+esac
