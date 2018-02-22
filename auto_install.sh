@@ -1,10 +1,12 @@
 #!/bin/bash
 echo "Auto install of all my need tool for a server"
 echo "This script is for debian based distribution"; sleep 1
+#!/bin/bash
 if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user" 2>&1
-  exit 1
-else
+   echo "This script must be run as root" 
+   exit 1
+fi
+
 echo "[updating]"; sleep 1
 apt-get update
 echo "[upgrading]"; sleep 1
@@ -21,12 +23,26 @@ mv zshrc ~/.zshrc
 echo "install of antigen done"
 cd /tmp
 
-echo -n "[?] Docker ? (y/n)"
-case &{answare:0:1} in
+
+read -p "[...] Installing docker (y/n)? " answer
+case ${answer:0:1} in
     y|Y )
-        echo "[...] Installing Docker"
+        echo "[...] Installing docker"
+        curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh 
     ;;
     * )
-    echo [...] Skiping 
-        ;;
+        echo "[...] Skiping Docker installing"
+    ;;
 esac
+
+read -p "[...] Installing spf13-vim vim ide (y/n)?" answer
+case ${answer:0:1} in
+    y|Y )
+        echo "[...] Installing spf13-vim."
+        curl http://j.mp/spf13-vim3 -L -o - | sh
+    ;;
+    * )
+        echo "[...] Skiping spf13-vim."
+    ;;
+esac
+
