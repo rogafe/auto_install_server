@@ -21,7 +21,7 @@ cd /tmp
 wget https://raw.githubusercontent.com/rogafe/server_dotefile/master/zshrc
 mv zshrc ~/.zshrc
 echo "install of antigen done"
-cd /tmp
+
 
 
 read -p "[...] Installing docker (y/n)? " answer

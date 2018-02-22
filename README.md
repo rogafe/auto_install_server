@@ -6,7 +6,7 @@ A little auto install script for my server
 __How to install__
 
 ```bash
-wget https://raw.githubusercontent.com/rogafe/auto_install_server/master/auto_install.sh` 
+wget https://git.io/vAzFz -O auto_install.sh
 
 vim auto_install.sh
 
