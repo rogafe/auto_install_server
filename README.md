@@ -7,6 +7,8 @@ __How to install__
 
 ```bash
 wget https://git.io/vAzFz -O auto_install.sh
+or only dotfile 
+wget https://git.io/vhJSc -O auto_dotfile.sh
 
 vim auto_install.sh
 
