@@ -17,9 +17,7 @@ echo "setting up antigen and zsh "
 mkdir -p ~/.antigen
 curl -L git.io/antigen > ~/.antigen/antigen.zsh
 chsh -s /bin/zsh
-cd /tmp
-wget https://raw.githubusercontent.com/rogafe/server_dotefile/master/zshrc
-mv zshrc ~/.zshrc
+curl -Lo ~/.zshrc https://raw.githubusercontent.com/rogafe/server_dotefile/master/zshrc
 echo "install of antigen done"
 
 
