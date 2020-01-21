@@ -2,11 +2,11 @@ echo "This Script only install my dotfile"
 
 
 echo "[updating]"; sleep 1
-apt-get update
+sudo apt-get update
 echo "[upgrading]"; sleep 1
-apt-get upgrade -y
+sudo apt-get upgrade -y
 echo 'Install of needed package "zsh git curl htop byobu vim"';sleep 01
-apt-get install zsh git curl htop byobu vim -y
+sudo apt-get install zsh git curl htop byobu vim -y
 echo "setting up antigen and zsh "
 mkdir -p ~/.antigen
 curl -L git.io/antigen > ~/.antigen/antigen.zsh
