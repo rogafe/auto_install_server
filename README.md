@@ -1,5 +1,5 @@
 # auto_install_server
-A little auto install script for my server
+A little auto install script for my server using my [server dotfile](https://github.com/rogafe/server_dotfile)
 
 **DONT FORGET TO VIEW THE CODE**
 
